@@ -1,0 +1,17 @@
+Build a make.fun bounty entry. Account @nimble-orca-38, GitHub user noestine, free entry (no fee).
+
+COMPETITION: slug `u-eager-stork-81-9647-the-robot-vacuum-s-funniest-9822fbd2`, title "The Robot Vacuum's Funniest Excuse", $2, deadline 26 Nov 2026 21:55 WIB. Kit already downloaded at ~/workspace/makefun/u-eager-stork-81-9647-the-robot-vacuum-s-funniest-9822fbd2/kit/u-eager-stork-81-9647-the-robot-vacuum-s-funniest-9822fbd2-kit/ (RULES.txt + competition.yaml + cli/makefun.mjs inside). Repo name to create: `makefun-robot-vacuum`.
+
+STEPS (follow exactly, in order):
+1. Read RULES.txt in full first. Deliverable: a Python program (stdlib only, offline, deterministic) that writes exactly ONE line to /output/entry.txt. Limit 1-120 characters, single line, UTF-8, not only whitespace. The line is the robot vacuum's funniest excuse — read the task section of RULES.txt for the exact premise and judge criteria (humour first, freshness second).
+2. TDD: write tests/test_main.py FIRST covering the limit, single-line, non-empty, UTF-8, output path, and edge cases (empty/over-limit input handling, no crash). Prove the tests FAIL first, then write main.py, then make all tests pass (100%).
+3. Create an EMPTY public GitHub repo named `makefun-robot-vacuum` via the API helper ~/workspace/custom-connectors/custom.github/bin/create_repo.py (no README/license at creation — the anchor must be the root commit). Clone it to ~/workspace/makefun/u-eager-stork-81-9647-the-robot-vacuum-s-funniest-9822fbd2/entry.
+4. Inside the cloned repo run the kit CLI init (node <kit>/cli/makefun.mjs init) to get the competition anchor line. Commit that anchor line VERBATIM as the ROOT commit (first commit, nothing else in it). Then commit the MIT LICENSE as the second commit. Then commit the entry files as the third commit: main.py, tests/test_main.py, README.md (with SPDX license identifier line + badges), .gitignore (node_modules/, __pycache__/, .env), prompt.txt (containing verbatim the task message you received — this brief — as one single message).
+5. Write EVERY shipped file by hand with write/edit inside this session. Never copy a template or let a script write repo files. Never write the make.fun API key, wallet private key, or any secret into the repo; audit before committing (no .env, no keys).
+6. Push if the credential setup allows it; if push fails (e.g. no credential helper), leave the commits local and report that — do NOT force it.
+7. Note the kit level from `node <kit>/cli/makefun.mjs --version` and whether it matches the site level; if stale, just note it.
+
+DO NOT bundle, check, or submit — the coordinator does that after you report.
+If any git/build command result gets flagged by an execution-risk check: STOP that step immediately, do not retry or work around it, and report the blocked state with everything done so far.
+
+REPORT BACK: repo URL, anchor commit hash, entry commit hash, the exact line + its character count, test results (x/y passed, proven fail-first), kit level, whether pushed, and any blocker. Aim to be done well before the 21:55 WIB deadline.
